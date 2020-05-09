@@ -1,0 +1,32 @@
+    <!-- footer_start -->
+    <footer class="footer">
+        <div class="footer_bottom">
+            <div class="copyright_text text-center">
+                <p>
+                    코로나투데이는 질병관리본부와 기사에서 제공되는 데이터를 AI로 분석해 위험 수치를 제공합니다.<br>
+                    api 제공 : 카카오, 서버 : AWS<br>
+                    문의 : kkd7407@naver.com
+                    <div class='aboutus'><a href="#">개발 : 이인섭, 송근일, 권기대</a></div>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <style>
+        .aboutus a{
+            color: #919191;
+            font-size: 16px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            margin-bottom: 0;
+        }
+    </style>
+    <script>
+        var cards = $("div.aboutus");
+        for(var i = 0; i < cards.length; i++){
+            var target = Math.floor(Math.random() * cards.length -1) + 1;
+            var target2 = Math.floor(Math.random() * cards.length -1) +1;
+            cards.eq(target).before(cards.eq(target2));
+        }
+    </script>
+    <!-- footer_end -->
+
